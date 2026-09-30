@@ -1,9 +1,9 @@
 {
  "org": "getparalo",
  "until": "2026-09-30",
- "repos": 25,
+ "repos": 26,
  "bytes": {
-  "TypeScript": 45085896,
+  "TypeScript": 45093571,
   "Swift": 14147671,
   "PLpgSQL": 13638119,
   "Kotlin": 4210148,
@@ -11,7 +11,7 @@
   "HTML": 2231232,
   "Java": 1160702,
   "Shell": 1130214,
-  "JavaScript": 940821,
+  "JavaScript": 941243,
   "CSS": 696706,
   "Go": 458268,
   "Rust": 106723,
