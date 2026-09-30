@@ -40,6 +40,11 @@ Most of the work lives in private repositories. The cadence does not.
   <img alt="My contributions across Paralo repositories since 1 June" src="assets/commits-light.svg" width="100%">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
+  <img alt="Languages across Paralo repositories" src="assets/languages-light.svg" width="100%">
+</picture>
+
 Every club will end up on one system. We're making sure it's this one.
 
 [getparalo.com](https://getparalo.com) · [jarrad@getparalo.com](mailto:jarrad@getparalo.com)

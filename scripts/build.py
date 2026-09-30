@@ -236,7 +236,7 @@ def fmt_hours(h):
     return f"{int(h)}h {int(round((h - int(h)) * 60)):02d}m" if h >= 1 else f"{int(round(h * 60))} min"
 
 
-def shipping_svg(d, t):
+def shipping_svg(d, t, personal=True):
     merged = d["merged"]
     since, until = date.fromisoformat(d["since"]), date.fromisoformat(d["until"])
     n, total = len(merged), sum(merged)
@@ -288,7 +288,8 @@ def shipping_svg(d, t):
     parts.append(f'<line x1="56" x2="{cx1}" y1="338" y2="338" stroke="{t["hair"]}" stroke-width="1"/>')
     this_month = [v for i, v in enumerate(merged) if (since + timedelta(days=i)).month == until.month and (since + timedelta(days=i)).year == until.year]
     per_day = sum(this_month) / len(this_month) if this_month else 0
-    stats = [(f'{d["mine"]:,}', "of them opened by me"), (fmt_hours(d["median_ttm_h"]), "median open to merge"), (f"{per_day:.1f}", f"merged per day in {until:%B}")]
+    first_stat = (f'{d["mine"]:,}', "of them opened by me") if personal else (str(d["repos"]), "repositories")
+    stats = [first_stat, (fmt_hours(d["median_ttm_h"]), "median open to merge"), (f"{per_day:.1f}", f"merged per day in {until:%B}")]
     for k, (num, lab) in enumerate(stats):
         x = 56 + k * 300
         parts.append(f'<text x="{x}" y="386" font-family="{SERIF}" font-size="34" fill="{t["ink"]}">{num}</text>')
@@ -298,7 +299,7 @@ def shipping_svg(d, t):
     return "\n".join(parts)
 
 
-def header_svg(t):
+def header_svg(t, byline="Jarrad Hicks, co-founder and CEO"):
     kite = base64.b64encode((ROOT / "assets" / "kite.png").read_bytes()).decode()
     W, H = 1200, 340
     return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Paralo. Golf clubs deserve better.">
@@ -312,7 +313,7 @@ def header_svg(t):
 <text x="56" y="236" font-family="{SANS}" font-size="20" fill="{t["muted"]}">{anim("opacity",0,1,0.55,0.9)}One system for the entire club. Tee sheet, competitions, live scoring, member app, wearables, EPOS, finance.</text>
 <line x1="56" x2="{W-56}" y1="286" y2="286" stroke="{t["hair"]}" stroke-width="1">{anim("x2",56,W-56,0.7,1.4)}</line>
 <text x="56" y="312" font-family="{SERIF}" font-size="17" font-style="italic" fill="{t["ink"]}" opacity="0.9">{anim("opacity",0,0.9,1.3,0.9)}We move at the pace of quality.</text>
-<text x="{W-56}" y="312" text-anchor="end" font-family="{SANS}" font-size="13" fill="{t["muted"]}">{anim("opacity",0,1,1.3,0.9)}Jarrad Hicks, co-founder and CEO</text>
+<text x="{W-56}" y="312" text-anchor="end" font-family="{SANS}" font-size="13" fill="{t["muted"]}">{anim("opacity",0,1,1.3,0.9)}{byline}</text>
 </svg>'''
 
 
@@ -324,7 +325,9 @@ if __name__ == "__main__":
     d, c, l = json.loads(DATA.read_text()), json.loads(COMMITS.read_text()), json.loads(LANGS.read_text())
     for name, t in THEMES.items():
         (ROOT / "assets" / f"shipping-{name}.svg").write_text(shipping_svg(d, t))
+        (ROOT / "assets" / f"shipping-org-{name}.svg").write_text(shipping_svg(d, t, personal=False))
         (ROOT / "assets" / f"header-{name}.svg").write_text(header_svg(t))
+        (ROOT / "assets" / f"header-org-{name}.svg").write_text(header_svg(t, "Founded 2026, United Kingdom"))
         (ROOT / "assets" / f"commits-{name}.svg").write_text(commits_svg(c, t, name))
         (ROOT / "assets" / f"languages-{name}.svg").write_text(languages_svg(l, t, name))
     print(f"{c['total']:,} contributions by {c['me']} ({c['prs']:,} PRs + {c['commits']:,} commits), {c['active_days']} active days, streak {c['streak']}")
