@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-label="1,768 pull requests merged at Paralo since 1 June 2026">
-<rect width="1200" height="440" rx="18" fill="#1A1815"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="456" viewBox="0 0 1200 456" role="img" aria-label="1,768 pull requests merged at Paralo since 1 June 2026">
+<rect width="1200" height="456" rx="18" fill="#1A1815"/>
 <text x="56" y="70" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" letter-spacing="3.2" font-weight="600" fill="#C49A2A">SHIPPING AT PARALO</text>
 <text x="52" y="196" font-family="Georgia, 'Times New Roman', Times, serif" font-size="128" fill="#FAF7F2"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.111;1" dur="0.90s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/>1,768</text>
 <text x="56" y="246" font-family="Georgia, 'Times New Roman', Times, serif" font-size="30" fill="#FAF7F2">pull requests merged</text>
@@ -117,11 +117,11 @@
 <rect x="560" y="66" width="10" height="10" rx="2" fill="#C49A2A"/><text x="576" y="75" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#8A8378">Merged that day</text>
 <line x1="700" x2="720" y1="71" y2="71" stroke="#FAF7F2" stroke-width="2.2"/><text x="728" y="75" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#8A8378">Seven day average</text>
 <line x1="56" x2="1144" y1="338" y2="338" stroke="#3A352F" stroke-width="1"/>
-<text x="56" y="386" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#FAF7F2">2h 32m</text>
-<text x="56" y="408" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A8378">median open to merge</text>
-<text x="356" y="386" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#FAF7F2">34.2</text>
-<text x="356" y="408" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A8378">merged per day in September</text>
-<text x="656" y="386" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#FAF7F2">15</text>
-<text x="656" y="408" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A8378">repositories</text>
-<text x="1144" y="408" text-anchor="end" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#8A8378">Source: GitHub, getparalo organisation, 1 June to 30 September 2026</text>
+<text x="56" y="386" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#FAF7F2">1,143</text>
+<text x="56" y="408" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A8378">of them opened by me</text>
+<text x="356" y="386" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#FAF7F2">2h 32m</text>
+<text x="356" y="408" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A8378">median open to merge</text>
+<text x="656" y="386" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#FAF7F2">34.2</text>
+<text x="656" y="408" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A8378">merged per day in September</text>
+<text x="56" y="438" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#8A8378">Source: GitHub, getparalo organisation, 1 June to 30 September 2026</text>
 </svg>

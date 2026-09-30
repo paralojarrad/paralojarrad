@@ -30,14 +30,14 @@ Most of the work lives in private repositories. The cadence does not.
 | Surface | What it does |
 | --- | --- |
 | **ClubOS** | The club's control plane. Tee sheet, competitions, membership, comms, finance. |
-| **Member app** | iPhone, Apple Watch, widgets and Android. Scoring, booking, leaderboards. Quiet by design. |
+| **Member app** | iPhone, Apple Watch and widgets. Scoring, booking, leaderboards. Quiet by design. |
 | **EPOS** | The till in the bar and pro shop, on the same member accounts as everything else. |
 | **Clubhouse screens** | Live leaderboards and tee boards. |
 | **Club website** | Designed and built in-house, sharing one spine with the club system. |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/paralo-dark.svg">
-  <img alt="A year of contributions, in three dimensions" src="profile-3d-contrib/paralo-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/commits-dark.svg">
+  <img alt="My contributions across Paralo repositories since 1 June" src="assets/commits-light.svg" width="100%">
 </picture>
 
 Every club will end up on one system. We're making sure it's this one.
