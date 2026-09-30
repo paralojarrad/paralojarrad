@@ -12,6 +12,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "shipping.json"
 COMMITS = ROOT / "data" / "commits.json"
+LANGS = ROOT / "data" / "languages.json"
 ORG, SINCE = "getparalo", date(2026, 6, 1)
 LONDON = ZoneInfo("Europe/London")
 
@@ -122,6 +123,59 @@ def collect_commits():
     COMMITS.write_text(json.dumps({"me": me, "org": ORG, "first": first.isoformat(), "until": today.isoformat(),
                                    "counts": series, "total": sum(series), "repos": touched, "commits": commits_total, "prs": prs,
                                    "active_days": sum(1 for v in series if v), "streak": best}, indent=1))
+
+
+LANG_LABEL = {"PLpgSQL": "PL/pgSQL"}
+LANG_NOTE = {"TypeScript": "ClubOS, backend, web", "Swift": "iPhone and Apple Watch", "PLpgSQL": "the database itself",
+             "Kotlin": "Android", "Python": "tooling and integrations", "Java": "the till", "Go": "connectors", "Rust": "the CLI"}
+
+
+def collect_languages():
+    """Linguist byte counts across every non-fork, non-archived repo in the org."""
+    repos = subprocess.run(["gh", "api", f"orgs/{ORG}/repos?per_page=100&type=all", "--paginate", "--jq",
+                            ".[] | select((.archived|not) and (.fork|not)) | .full_name"], capture_output=True, text=True).stdout.split()
+    totals, counted = {}, 0
+    for r in repos:
+        out = subprocess.run(["gh", "api", f"repos/{r}/languages"], capture_output=True, text=True)
+        if out.returncode:
+            continue
+        counted += 1
+        for k, v in json.loads(out.stdout).items():
+            totals[k] = totals.get(k, 0) + v
+    LANGS.write_text(json.dumps({"org": ORG, "until": date.today().isoformat(), "repos": counted,
+                                 "bytes": dict(sorted(totals.items(), key=lambda kv: -kv[1]))}, indent=1))
+
+
+def languages_svg(d, t, name):
+    ramp = ["#E4C373", "#C49A2A", "#B8902A", "#8C6F1F", "#5B4A1E"] if name == "dark" else ["#826518", "#A37F1F", "#C49A2A", "#D4AA45", "#E4C373"]
+    total = sum(d["bytes"].values())
+    top = list(d["bytes"].items())[:5]
+    rest = total - sum(v for _, v in top)
+    W, H = 1200, 300
+    x0, x1, y, bh = 56, W - 56, 118, 14
+    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Languages across Paralo repositories">',
+             f'<rect width="{W}" height="{H}" rx="18" fill="{t["ground"]}"/>',
+             f'<text x="56" y="70" font-family="{SANS}" font-size="12" letter-spacing="3.2" font-weight="600" fill="{t["label"]}">WHAT IT IS BUILT IN</text>',
+             f'<text x="{W-56}" y="70" text-anchor="end" font-family="{SANS}" font-size="12" fill="{t["muted"]}">{d["repos"]} repositories, {d["org"]} organisation, {date.fromisoformat(d["until"]):%-d %B %Y}</text>']
+    x = x0
+    segs = top + [("Everything else", rest)]
+    for i, (k, v) in enumerate(segs):
+        wdt = (x1 - x0) * v / total
+        col = ramp[i] if i < len(ramp) else t["hair"]
+        parts.append(f'<rect x="{x:.1f}" y="{y}" width="{max(wdt-2,1):.1f}" height="{bh}" rx="2" fill="{col}">{anim("width",0,f"{max(wdt-2,1):.1f}",0.1+i*0.12,0.7)}</rect>')
+        x += wdt
+    cols = 6
+    cw = (x1 - x0) / cols
+    for i, (k, v) in enumerate(segs):
+        cx = x0 + i * cw
+        col = ramp[i] if i < len(ramp) else t["hair"]
+        parts.append(f'<rect x="{cx}" y="166" width="10" height="10" rx="2" fill="{col}"/>')
+        parts.append(f'<text x="{cx+18}" y="176" font-family="{SANS}" font-size="13" fill="{t["ink"]}">{LANG_LABEL.get(k, k)}</text>')
+        parts.append(f'<text x="{cx}" y="216" font-family="{SERIF}" font-size="34" fill="{t["ink"]}">{v/total*100:.0f}%</text>')
+        note = LANG_NOTE.get(k, "" if k != "Everything else" else "HTML, CSS, shell, Java, Go, Rust")
+        parts.append(f'<text x="{cx}" y="240" font-family="{SANS}" font-size="12" fill="{t["muted"]}">{note}</text>')
+    parts.append("</svg>")
+    return "\n".join(parts)
 
 
 def shade(hex_colour, k):
@@ -266,10 +320,12 @@ if __name__ == "__main__":
     if "--collect" in sys.argv:
         collect()
         collect_commits()
-    d, c = json.loads(DATA.read_text()), json.loads(COMMITS.read_text())
+        collect_languages()
+    d, c, l = json.loads(DATA.read_text()), json.loads(COMMITS.read_text()), json.loads(LANGS.read_text())
     for name, t in THEMES.items():
         (ROOT / "assets" / f"shipping-{name}.svg").write_text(shipping_svg(d, t))
         (ROOT / "assets" / f"header-{name}.svg").write_text(header_svg(t))
         (ROOT / "assets" / f"commits-{name}.svg").write_text(commits_svg(c, t, name))
+        (ROOT / "assets" / f"languages-{name}.svg").write_text(languages_svg(l, t, name))
     print(f"{c['total']:,} contributions by {c['me']} ({c['prs']:,} PRs + {c['commits']:,} commits), {c['active_days']} active days, streak {c['streak']}")
     print(f"{sum(d['merged']):,} merged, {d['repos']} repos, median {fmt_hours(d['median_ttm_h'])}, through {d['until']}")
