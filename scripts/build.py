@@ -286,10 +286,10 @@ def shipping_svg(d, t, personal=True):
     parts.append(f'<line x1="{cx0+140}" x2="{cx0+160}" y1="{top-25}" y2="{top-25}" stroke="{t["line"]}" stroke-width="2.2"/><text x="{cx0+168}" y="{top-21}" font-family="{SANS}" font-size="12" fill="{t["muted"]}">Seven day average</text>')
     # hairline + stat row
     parts.append(f'<line x1="56" x2="{cx1}" y1="338" y2="338" stroke="{t["hair"]}" stroke-width="1"/>')
-    this_month = [v for i, v in enumerate(merged) if (since + timedelta(days=i)).month == until.month and (since + timedelta(days=i)).year == until.year]
-    per_day = sum(this_month) / len(this_month) if this_month else 0
+    window = merged[-31:-1] or merged   # last 30 complete days; today is still filling in
+    per_day = sum(window) / len(window)
     first_stat = (f'{d["mine"]:,}', "of them opened by me") if personal else (str(d["repos"]), "repositories")
-    stats = [first_stat, (fmt_hours(d["median_ttm_h"]), "median open to merge"), (f"{per_day:.1f}", f"merged per day in {until:%B}")]
+    stats = [first_stat, (fmt_hours(d["median_ttm_h"]), "median open to merge"), (f"{per_day:.1f}", "merged per day, last 30 days")]
     for k, (num, lab) in enumerate(stats):
         x = 56 + k * 300
         parts.append(f'<text x="{x}" y="386" font-family="{SERIF}" font-size="34" fill="{t["ink"]}">{num}</text>')

@@ -123,7 +123,7 @@
 <text x="56" y="408" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#6B655C">repositories</text>
 <text x="356" y="386" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">2h 31m</text>
 <text x="356" y="408" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#6B655C">median open to merge</text>
-<text x="656" y="386" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">1.0</text>
-<text x="656" y="408" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#6B655C">merged per day in October</text>
+<text x="656" y="386" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">34.3</text>
+<text x="656" y="408" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#6B655C">merged per day, last 30 days</text>
 <text x="56" y="438" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#6B655C">Source: GitHub, getparalo organisation, 1 June to 1 October 2026</text>
 </svg>
