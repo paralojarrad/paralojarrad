@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Languages across Paralo repositories">
 <rect width="1200" height="300" rx="18" fill="#FAF7F2"/>
 <text x="56" y="70" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" letter-spacing="3.2" font-weight="600" fill="#7D6316">WHAT IT IS BUILT IN</text>
-<text x="1144" y="70" text-anchor="end" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#6B655C">26 repositories, getparalo organisation, 5 October 2026</text>
-<rect x="56.0" y="118" width="579.9" height="14" rx="2" fill="#826518"><animate attributeName="width" values="0;0;579.9" keyTimes="0;0.125;1" dur="0.80s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
-<rect x="637.9" y="118" width="170.9" height="14" rx="2" fill="#A37F1F"><animate attributeName="width" values="0;0;170.9" keyTimes="0;0.239;1" dur="0.92s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
-<rect x="810.8" y="118" width="164.6" height="14" rx="2" fill="#C49A2A"><animate attributeName="width" values="0;0;164.6" keyTimes="0;0.327;1" dur="1.04s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
-<rect x="977.4" y="118" width="47.2" height="14" rx="2" fill="#D4AA45"><animate attributeName="width" values="0;0;47.2" keyTimes="0;0.397;1" dur="1.16s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
-<rect x="1026.6" y="118" width="30.8" height="14" rx="2" fill="#E4C373"><animate attributeName="width" values="0;0;30.8" keyTimes="0;0.453;1" dur="1.28s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
-<rect x="1059.4" y="118" width="82.6" height="14" rx="2" fill="#E3DCCF"><animate attributeName="width" values="0;0;82.6" keyTimes="0;0.500;1" dur="1.40s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<text x="1144" y="70" text-anchor="end" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#6B655C">26 repositories, getparalo organisation, 7 October 2026</text>
+<rect x="56.0" y="118" width="572.8" height="14" rx="2" fill="#826518"><animate attributeName="width" values="0;0;572.8" keyTimes="0;0.125;1" dur="0.80s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="630.8" y="118" width="176.0" height="14" rx="2" fill="#A37F1F"><animate attributeName="width" values="0;0;176.0" keyTimes="0;0.239;1" dur="0.92s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="808.8" y="118" width="164.8" height="14" rx="2" fill="#C49A2A"><animate attributeName="width" values="0;0;164.8" keyTimes="0;0.327;1" dur="1.04s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="975.7" y="118" width="46.2" height="14" rx="2" fill="#D4AA45"><animate attributeName="width" values="0;0;46.2" keyTimes="0;0.397;1" dur="1.16s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="1023.9" y="118" width="30.3" height="14" rx="2" fill="#E4C373"><animate attributeName="width" values="0;0;30.3" keyTimes="0;0.453;1" dur="1.28s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="1056.2" y="118" width="85.8" height="14" rx="2" fill="#E3DCCF"><animate attributeName="width" values="0;0;85.8" keyTimes="0;0.500;1" dur="1.40s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
 <rect x="56.0" y="166" width="10" height="10" rx="2" fill="#826518"/>
 <text x="74.0" y="176" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#1A1815">TypeScript</text>
 <text x="56.0" y="216" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">53%</text>
@@ -22,7 +22,7 @@
 <text x="418.6666666666667" y="240" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#6B655C">iPhone and Apple Watch</text>
 <rect x="600.0" y="166" width="10" height="10" rx="2" fill="#D4AA45"/>
 <text x="618.0" y="176" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#1A1815">Kotlin</text>
-<text x="600.0" y="216" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">5%</text>
+<text x="600.0" y="216" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">4%</text>
 <text x="600.0" y="240" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#6B655C">Android</text>
 <rect x="781.3333333333334" y="166" width="10" height="10" rx="2" fill="#E4C373"/>
 <text x="799.3333333333334" y="176" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#1A1815">Python</text>
