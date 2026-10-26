@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: Platane/snk/svg-only@v3
+      - uses: paralojarrad/snk/svg-only@main
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-dark.svg?color_snake=#FAF7F2&color_dots=#2A2622,#5B4A1E,#8C6F1F,#B8902A,#E4C373
-            dist/snake-light.svg?color_snake=#1A1815&color_dots=#ECE6DA,#E4C373,#D4AA45,#C49A2A,#826518
+            dist/snake-dark.svg?snake_length=24&color_snake=#FAF7F2&color_dots=#2A2622,#5B4A1E,#8C6F1F,#B8902A,#E4C373
+            dist/snake-light.svg?snake_length=24&color_snake=#1A1815&color_dots=#ECE6DA,#E4C373,#D4AA45,#C49A2A,#826518
       - uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
