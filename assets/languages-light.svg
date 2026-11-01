@@ -2,23 +2,23 @@
 <rect width="1200" height="300" rx="18" fill="#FAF7F2"/>
 <text x="56" y="70" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" letter-spacing="3.2" font-weight="600" fill="#7D6316">WHAT IT IS BUILT IN</text>
 <text x="1144" y="70" text-anchor="end" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#6B655C">28 repositories, getparalo organisation, 1 November 2026</text>
-<rect x="56.0" y="118" width="568.5" height="14" rx="2" fill="#826518"><animate attributeName="width" values="0;0;568.5" keyTimes="0;0.125;1" dur="0.80s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
-<rect x="626.5" y="118" width="214.3" height="14" rx="2" fill="#A37F1F"><animate attributeName="width" values="0;0;214.3" keyTimes="0;0.239;1" dur="0.92s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
-<rect x="842.8" y="118" width="171.2" height="14" rx="2" fill="#C49A2A"><animate attributeName="width" values="0;0;171.2" keyTimes="0;0.327;1" dur="1.04s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
-<rect x="1016.0" y="118" width="26.6" height="14" rx="2" fill="#D4AA45"><animate attributeName="width" values="0;0;26.6" keyTimes="0;0.397;1" dur="1.16s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
-<rect x="1044.6" y="118" width="22.0" height="14" rx="2" fill="#E4C373"><animate attributeName="width" values="0;0;22.0" keyTimes="0;0.453;1" dur="1.28s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
-<rect x="1068.6" y="118" width="73.4" height="14" rx="2" fill="#E3DCCF"><animate attributeName="width" values="0;0;73.4" keyTimes="0;0.500;1" dur="1.40s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="56.0" y="118" width="551.5" height="14" rx="2" fill="#826518"><animate attributeName="width" values="0;0;551.5" keyTimes="0;0.125;1" dur="0.80s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="609.5" y="118" width="209.1" height="14" rx="2" fill="#A37F1F"><animate attributeName="width" values="0;0;209.1" keyTimes="0;0.239;1" dur="0.92s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="820.6" y="118" width="197.4" height="14" rx="2" fill="#C49A2A"><animate attributeName="width" values="0;0;197.4" keyTimes="0;0.327;1" dur="1.04s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="1020.0" y="118" width="25.4" height="14" rx="2" fill="#D4AA45"><animate attributeName="width" values="0;0;25.4" keyTimes="0;0.397;1" dur="1.16s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="1047.4" y="118" width="21.7" height="14" rx="2" fill="#E4C373"><animate attributeName="width" values="0;0;21.7" keyTimes="0;0.453;1" dur="1.28s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
+<rect x="1071.1" y="118" width="70.9" height="14" rx="2" fill="#E3DCCF"><animate attributeName="width" values="0;0;70.9" keyTimes="0;0.500;1" dur="1.40s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.2 0.7 0.2 1"/></rect>
 <rect x="56.0" y="166" width="10" height="10" rx="2" fill="#826518"/>
 <text x="74.0" y="176" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#1A1815">TypeScript</text>
-<text x="56.0" y="216" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">52%</text>
+<text x="56.0" y="216" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">51%</text>
 <text x="56.0" y="240" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#6B655C">ClubOS, backend, web</text>
 <rect x="237.33333333333334" y="166" width="10" height="10" rx="2" fill="#A37F1F"/>
 <text x="255.33333333333334" y="176" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#1A1815">PL/pgSQL</text>
-<text x="237.33333333333334" y="216" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">20%</text>
+<text x="237.33333333333334" y="216" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">19%</text>
 <text x="237.33333333333334" y="240" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#6B655C">the database itself</text>
 <rect x="418.6666666666667" y="166" width="10" height="10" rx="2" fill="#C49A2A"/>
 <text x="436.6666666666667" y="176" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#1A1815">Swift</text>
-<text x="418.6666666666667" y="216" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">16%</text>
+<text x="418.6666666666667" y="216" font-family="Georgia, 'Times New Roman', Times, serif" font-size="34" fill="#1A1815">18%</text>
 <text x="418.6666666666667" y="240" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#6B655C">iPhone and Apple Watch</text>
 <rect x="600.0" y="166" width="10" height="10" rx="2" fill="#D4AA45"/>
 <text x="618.0" y="176" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#1A1815">Kotlin</text>
