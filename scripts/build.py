@@ -38,7 +38,7 @@ def collect():
       nodes{ ... on PullRequest { createdAt mergedAt repository{ nameWithOwner } } } } }"""
     prs, start, today = [], SINCE, date.today()
     while start <= today:
-        end = min(start + timedelta(days=9), today)
+        end = min(start + timedelta(days=2), today)
         after = None
         while True:
             d = gql(q, {"q": f"org:{ORG} is:pr is:merged merged:{start}..{end}", "after": after})["search"]
@@ -103,7 +103,7 @@ def collect_commits():
       pageInfo{hasNextPage endCursor} nodes{ ... on PullRequest { createdAt } } } }"""
     prs, start = 0, first
     while start <= today:
-        end, after = min(start + timedelta(days=9), today), None
+        end, after = min(start + timedelta(days=2), today), None
         while True:
             d = gql(q, {"q": f"org:{ORG} is:pr author:{me} created:{start}..{end}", "after": after})["search"]
             for n in d["nodes"]:
