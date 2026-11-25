@@ -2,7 +2,7 @@
  "me": "paralojarrad",
  "org": "getparalo",
  "first": "2026-05-31",
- "until": "2026-11-20",
+ "until": "2026-11-25",
  "counts": [
   0,
   0,
@@ -177,12 +177,17 @@
   256,
   221,
   276,
-  0
+  173,
+  236,
+  76,
+  127,
+  95,
+  116
  ],
- "total": 8530,
- "repos": 13,
- "commits": 3925,
- "prs": 4605,
- "active_days": 102,
- "streak": 32
+ "total": 9353,
+ "repos": 14,
+ "commits": 4344,
+ "prs": 5009,
+ "active_days": 108,
+ "streak": 38
 }
